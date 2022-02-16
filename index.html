@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>자동 암호화 기기</title>
+</head>
+<body>
+    <div id="root">
+        <label for="encode">encoding</label>
+        <input type="radio" id="encode" name="type" value="encode" onclick="crypting()">
+        <br />
+        
+        <label for="decode">decoding</label>
+        <input type="radio" id="decode" name="type" value="decode" onclick="crypting()" checked>
+        <br />
+        
+        <label for="key">key</label>
+        <input type="text" id="key">
+        <br />
+        
+        <textarea id="description" onchange="crypting()"></textarea>
+        <br />
+        
+        <textarea id="result"></textarea>
+        <button style="display: none" onclick="openLink()">이동하기</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="./index.js"></script>   
+</body>
+</html>
